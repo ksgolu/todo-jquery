@@ -1,0 +1,22 @@
+body{
+    font-size:62.5%;
+}
+.circle{
+    border-radius: 50%;
+    width:15.0rem;
+    height:15.0rem;
+    border: 2px solid black;
+}
+.circle-inner{
+    /* width:20px; */
+    height:10px;
+}
+.borders{
+    border: 1px solid red;
+    /* height:100px;
+    width:150px; */
+}
+
+h1{
+    font-size: 1rem;
+}
