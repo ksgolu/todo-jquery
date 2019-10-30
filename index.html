@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 
 <head>
     <meta charset="UTF-8">
@@ -15,13 +15,13 @@
     <link rel='stylesheet' href='./index.css'>
     <title>Todo</title>
 </head>
-
 <body>
-    <main>
-        <section id='upperContainer' class='borders d-flex justify-content-between '>
-            <section class='borders card border-light mb-3' style='width:100%'>
-                <strong class='card-header'>Work to do today</strong>
-                <article id='todayTodos' class='card-body'>
+    <main class='d-flex bg-dark   bg-dark vh-100'>
+        <section id='upperContainer' class=' w-50  p-3  '>
+            <section class=' card border-light h-50'>
+                <strong class='card-header bg-warning'>Work to do today</strong>
+                <article id='todayTodos' class='card-body overflow-auto '>
+                   
                     <!-- <h1>todo</h1>
                     <h1>todo</h1>
                     <h1>todo</h1>
@@ -30,79 +30,110 @@
                     <h1>todo</h1>
                     <h1>todo</h1> -->
                 </article>
-
-                <strong class='card-header'>completed</strong>
-                <article id="completed-todo" class='card-body'>
+            </section>
+                <article class='card h-50'>
+                        <strong class='card-header bg-info'>completed</strong>
+                        <article id="completed-todo" class='card-body overflow-auto'>
+        
+                        </article>
 
                 </article>
+                
 
 
-            </section>
-            <article id='progressContainer' class='borders'>
-                <div class='progress circle'>
-                    <!-- <div class="progress-bar w-75 circle" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div> -->
-                </div>
-
-            </article>
+          
+           
         </section>
-        <section id='lowercontainer' class='borders d-flex'>
-            <section id='addTodo' class='bg-blue'>
-                <article class='card border-success m-3'>
-                    <img class='card-img-top' alt=''>
-                    <strong class='card-header '>Add a note</strong>
-                    <article class='card-body bg-light'>
-                        <form id='todoForm' style=' height:10rem'>
-                            <button type='button' class='btn btn-primary btn' value='today'> Today
-                            </button>
-                            <strong class='btn'> Scheduled for : </strong>
-                            <select name='day' class='btn-sm'>
-                                <option>Today</option>
-                                <option>Monday</option>
-                                <option>Tuesday</option>
-                                <option>Wednesday</option>
-                                <option>Thursday</option>
-                                <option> Friday </option>
-                                <option>saturday</option>
-                                <option>sunday</option>
-                            </select>
-                            <hr />
-                            <br />
-                            <input name='text' type='text' class=''
-                                style='border:none; border-bottom: 2px solid red; height: 1.5rem; padding: 0 0.5rem; font-size: 1.0rem;'
-                                placeholder='What to do?'>
-                            <button id='submitForm' type='button' class=' btn btn-success btn-sm'>Add</button>
-                            <button type='button' class=' btn btn-danger btn-sm'>Cancel</button>
-                        </form>
-                    </article>
-                </article>
-            </section>
-            <section class='borders d-flex'>
-                <article>
-                    <button type='button' class='btn-info btn-sm mt-3 ml-3'>Prev</button>
-                </article>
-                <article class='card text-white ml-3 mr-3 bg-secondary' style='width:20rem'>
-                    <strong class='card-header'>Tomorrow</strong>
-                    <article id='upcoming' class='card-body'>
-                        <!-- <h1>hiiii</h1>
-                        <h1>hiiii</h1>
-                        <h1>hiiii</h1>
-                        <h1>hiiii</h1>
-                        <h1>hiiii</h1> -->
-                    </article>
+        <section id='sideContainer' class='   w-50  '>
+                <section class='d-flex h-50'>
+              
+                    <article class='card text-white ml-3 mr-3 mt-5 bg-secondary flex-grow-1 ' style='width:20rem'>
+                            <strong class='card-header'>Tomorrow</strong>
+                            <article id='upcoming' class='card-body '>
+                                <!-- <h1>hiiii</h1>
+                                <h1>hiiii</h1>
+                                <h1>hiiii</h1>
+                                <h1>hiiii</h1>
+                                <h1>hiiii</h1> -->
+                            </article>
+        
+                        </article>
+                        <article id='progressContainer' class=' text-white mt-5 mr-10 d-flex flex-column'>
+                              
+                                <div class='progress circle'>
+                                    <!-- <div class="progress-bar w-75 circle" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div> -->
+                                </div>
+                                <article style='display: table'>
+                                        <strong class='ml-5'style='font-size: 1.5rem;'> Your Progress</strong>
+                                        <hr class="bg-white"/>
+                                        <strong style='font-size: 1.0rem;'>All Upcoming todos: 30</strong>
+                                        <br/>
+                                        <strong style='font-size: 1.0rem;' >Today Todo:10</strong>
+                                        <br/>
+                                        <strong style='font-size: 1.0rem;'>Tomorrow Todo:20</strong>
+                                    </article>
+                
+                            </article>
+                    </section>    
 
-                </article>
-                <article>
-                    <button type='button' class='btn btn-sm btn-info mt-3 mr-3'>next</button>
-                </article>
-            </section>
+                            <section id='addTodo' class='  d-flex m-3' >
+                                <section style='padding:0; background-color:#8e44ad; height:20.0rem;'>
+                                    <article class='card border-success ' style='width:24.0rem; height: 5.0rem; margin:2.0rem'>
+                                        <img class='card-img-top' alt=''>
+                                        <strong class='card-header '>Add a note</strong>
+                                        <article class='card-body bg-light'>
+                                            <form id='todoForm' style=' height:10rem'>
+                                                <button type='button' class='btn btn-primary btn' value='today'> Today
+                                                </button>
+                                                <strong class='btn'> Scheduled for : </strong>
+                                                <select name='day' class='btn-sm'>
+                                                    <option>Today</option>
+                                                    <option>Monday</option>
+                                                    <option>Tuesday</option>
+                                                    <option>Wednesday</option>
+                                                    <option>Thursday</option>
+                                                    <option> Friday </option>
+                                                    <option>saturday</option>
+                                                    <option>sunday</option>
+                                                </select>
+                                                <hr />
+                                                <br />
+                                                <input name='text' type='text' class=''
+                                                    style='border:none; border-bottom: 2px solid red; height: 1.5rem; padding: 0 0.5rem; font-size: 1.0rem;'
+                                                    placeholder='What to do?'>
+                                                <button id='submitForm' type='button' class=' btn btn-success btn-sm'>Add</button>
+                                                <button type='button' class=' btn btn-danger btn-sm'>Cancel</button>
+                                            </form>
+                                        </article>
+                                    </article>
+                                </section>
+
+                                    <article class='card ml-3 flex-grow-1 bg-secondary text-white '>
+                                        <strong  class='card-header'>Recently Added</strong>
+                                        <article id='recentlyAdded' class='overflow-auto'>
+
+                                        </article>
+
+                                    </article>
+                                </section>
+                              
+                    
+                   
+           
+           
         </section>
     </main>
     <!-- <script src='./jq.js'>
                     </script> -->
     <script>
         $(document).ready(function () {
+            // const recentTodo = [];
+            let todos = JSON.parse(localStorage.getItem('todos'));
+            if( todos === null)
+                todos = localStorage.setItem('todos','[]');
+
             init();
-            const todos = JSON.parse(localStorage.getItem('todos'));
+          
 
             //[
             // { text: 'feed cat', day: 'Monday', done: false },
@@ -132,28 +163,30 @@
                     done: false
                 }
                 createTodo(todo);
-                console.log(todos)
-
+                recentTodo(todo);
                 init();
 
             });
 
             function init() {
-                $('#todayTodos').html('');
-                $('#upcoming').html('');
-                $('#completed-todo').html('')
+                $('#todayTodos').empty();
+                $('#upcoming').empty();
+                $('#completed-todo').empty();
                 try {
                     const todos = JSON.parse(localStorage.getItem('todos'));
                     const Day = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
                     const today = Day[new Date().getDay()];
                     const tomorrow = ((new Date().getDay()) + 1) === 7 ? Day[0] : Day[new Date().getDay() + 1]
-
+                    console.log(tomorrow)
                     todos.map((item, index, arr) => {
                         if (item.day === today) {
                             if (item.done === false) {
-                                const task = $(`<article class='todo border d-flex justify-content-between ' style='font-size:1.2rem'></article>`).text(item.text)
 
-                                const check = $("<i class='fas fa-check mr-3'></i>").click(function () {
+                                const task = $(`<article 
+                                    class='todo d-flex justify-content-between bg-light mb-1 p-1'  
+                                    style='font-size:1.2rem; border-bottom: 2px solid light-grey'></article>`).text(item.text)
+
+                                const check = $("<i class='fas fa-check mr-3 text-info'></i>").click(function () {
                                     var selectedTodo = $(this).parent().parent();
                                     selectedTodo.fadeOut(1000, function () {
                                         // $('#completed-todo').append(selectedTodo.text());
@@ -163,7 +196,7 @@
                                     });
 
                                 });
-                                const del = $("<i class='fas fa-trash-alt '></i>").click(function () {
+                                const del = $("<i class='fas fa-trash-alt text-danger'></i>").click(function () {
                                     var selectedTodo = $(this).parent().parent();
                                     selectedTodo.fadeOut(1000, function () {
                                         deleteTodo(selectedTodo.text());
@@ -172,9 +205,9 @@
 
                                 });
                                 const action = $("<div class='mr-3'>").append(check, del)
-                                task.append(action);
+                                task.append(action)
                                 // $('#todayTodos').append(`<h1>${item.text}</h1>done":true`)
-                                $('#todayTodos').append(task);
+                                $('#todayTodos').append(task)
                             }
                             else {
                                 moveToDone(item)
@@ -182,8 +215,8 @@
 
                         }
                         if (item.day === tomorrow) {
-                            const task = $("<article class'd-flex justify-content-between' style='font-size:1.2rem></article>").text(item.text);
-                            const del = $("<i class='fas fa-trash-alt '></i>").click(function () {
+                            const task = $("<article class='d-flex justify-content-between p-2 mb-1  bg-dark' style='font-size:1.0rem'>").text(item.text);
+                            const del = $("<i class='fas fa-trash-alt text-warning'></i>").click(function () {
                                 const seletedTodo = $(this).parent();
                                 seletedTodo.fadeOut(1000, function () {
                                     deleteTodo(seletedTodo.text())
@@ -205,10 +238,10 @@
             function done(text) {
                 // console.log(text)
                 try {
-                    const todos = JSON.parse(localStorage.getItem('todos'));
+                    //const todos = JSON.parse(localStorage.getItem('todos'));
                     //console.log(todos)
                     const newTodos = todos.map(todo => {
-                        if (todo.text == text) {
+                        if (todo.text === text) {
                             todo.done = true;
                             moveToDone(todo);
                             console.log(todo)
@@ -224,7 +257,7 @@
 
             function moveToDone(todo) {
                 const task = $(`<article class='todo border d-flex justify-content-between' style='font-size:1.2rem'></article>`).text(todo.text);
-                const del = $("<i class='fas fa-trash-alt '></i>").click(function () {
+                const del = $("<i class='fas fa-trash-alt text-danger mr-3'></i>").click(function () {
                     const seletedTodo = $(this).parent();
                     seletedTodo.fadeOut(1000, function () {
                         deleteTodo(seletedTodo.text())
@@ -232,9 +265,7 @@
                     })
                 });
                 task.append(del);
-                $('#completed-todo').append(function () {
-                    return (task.fadeIn(1000))
-                });
+                $('#completed-todo').append(task);
 
             }
 
@@ -249,6 +280,13 @@
                 } catch (e) {
 
                 }
+            }
+
+            function recentTodo(todo)
+            {
+                const task = $("<article class=' m-1 p-1 bg-dark d-flex justify-content-between'>").text(`${todo.text}`);
+                task.append(`<span>${todo.day}</span>`)
+                $('#recentlyAdded').append(task)
             }
         });
     </script>
